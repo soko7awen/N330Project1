@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4knno112x3b8"]
+
+[ext_resource type="Texture2D" uid="uid://k0fb3lu6e8v1" path="res://Snooze.jpeg" id="1_yv00y"]
+[ext_resource type="PackedScene" uid="uid://do6aanqyxkdet" path="res://Entities/Player/player.tscn" id="2_7wl5t"]
+[ext_resource type="PackedScene" uid="uid://3ah6vv56uv04" path="res://Entities/NPC/npc.tscn" id="3_8d1h3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_24k30"]
+size = Vector3(100, 0.11, 100)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p3ogk"]
+size = Vector3(100, 0.1, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wvtxs"]
+albedo_texture = ExtResource("1_yv00y")
+
+[node name="main" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+shape = SubResource("BoxShape3D_24k30")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_p3ogk")
+surface_material_override/0 = SubResource("StandardMaterial3D_wvtxs")
+
+[node name="Player" parent="." instance=ExtResource("2_7wl5t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="NPC" parent="." instance=ExtResource("3_8d1h3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -3)

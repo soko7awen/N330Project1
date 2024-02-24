@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bdl1emxhq3lvv"
+path="res://.godot/imported/test.dialogue-39060789a0dadd5a65a42fe4f11a5dfa.tres"
+
+[deps]
+
+source_file="res://Entities/NPC/TestPenguin/test.dialogue"
+dest_files=["res://.godot/imported/test.dialogue-39060789a0dadd5a65a42fe4f11a5dfa.tres"]
+
+[params]
+
+defaults=true
