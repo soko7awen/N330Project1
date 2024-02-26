@@ -1,7 +1,7 @@
-[gd_scene load_steps=110 format=3 uid="uid://3ah6vv56uv04"]
+[gd_scene load_steps=109 format=3 uid="uid://3ah6vv56uv04"]
 
-[ext_resource type="Script" path="res://Entities/NPC/npc.gd" id="1_kaekg"]
-[ext_resource type="Texture2D" uid="uid://bvbacrb55b32x" path="res://Entities/NPC/TestPenguin/penguin.png" id="2_kpix2"]
+[ext_resource type="Script" path="res://entities/npc/npc.gd" id="1_kaekg"]
+[ext_resource type="Texture2D" uid="uid://bvbacrb55b32x" path="res://entities/npc/TestPenguin/penguin.png" id="2_kpix2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_emari"]
 atlas = ExtResource("2_kpix2")
@@ -742,24 +742,13 @@ animations = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_j6ivv"]
 size = Vector3(0.8, 0.8, 0.3)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_h8eqr"]
-size = Vector3(2, 2, 2)
-
 [node name="NPC" type="CharacterBody3D"]
 script = ExtResource("1_kaekg")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 pixel_size = 0.03
-billboard = 2
 sprite_frames = SubResource("SpriteFrames_7bf81")
 autoplay = "default"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_j6ivv")
-
-[node name="InteractArea" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
-shape = SubResource("BoxShape3D_h8eqr")
-
-[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]

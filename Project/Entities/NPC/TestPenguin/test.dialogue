@@ -1,4 +1,4 @@
-~ test
+~ start
 
 Penguin: [[yo|sup|hey]].
 Decide.
@@ -6,7 +6,8 @@ Decide.
 	Penguin: yup
 - Second one
 	Penguin: You picked the second one.
-- Start again => test
+- Start again => start
 - End the conversation => END
+
 
 => END

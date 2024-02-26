@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://do6aanqyxkdet"]
+[gd_scene load_steps=5 format=3 uid="uid://do6aanqyxkdet"]
 
-[ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_awiq5"]
-[ext_resource type="Script" path="res://Entities/Player/camera_controller.gd" id="2_0tujb"]
+[ext_resource type="Script" path="res://entities/player/player.gd" id="1_awiq5"]
+[ext_resource type="Script" path="res://entities/player/camera_controller.gd" id="2_0tujb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_elb7i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h05nf"]
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_awiq5")
@@ -16,3 +18,11 @@ script = ExtResource("2_0tujb")
 
 [node name="Camera3D" type="Camera3D" parent="CameraController"]
 current = true
+
+[node name="ActionableFinder" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ActionableFinder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+shape = SubResource("BoxShape3D_h05nf")

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvbacrb55b32x"
-path.s3tc="res://.godot/imported/penguin.png-42a90c57f14026e60f79853cd8ea7a72.s3tc.ctex"
+path.s3tc="res://.godot/imported/penguin.png-040092e99b460431f4816d99dbfb183f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Entities/NPC/TestPenguin/penguin.png"
-dest_files=["res://.godot/imported/penguin.png-42a90c57f14026e60f79853cd8ea7a72.s3tc.ctex"]
+source_file="res://entities/npc/TestPenguin/penguin.png"
+dest_files=["res://.godot/imported/penguin.png-040092e99b460431f4816d99dbfb183f.s3tc.ctex"]
 
 [params]
 
