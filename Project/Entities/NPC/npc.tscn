@@ -739,16 +739,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_j6ivv"]
-size = Vector3(0.8, 0.8, 0.3)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_urm88"]
+radius = 0.46988
+height = 1.12461
 
 [node name="NPC" type="CharacterBody3D"]
 script = ExtResource("1_kaekg")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 pixel_size = 0.03
+billboard = 2
 sprite_frames = SubResource("SpriteFrames_7bf81")
 autoplay = "default"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_j6ivv")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("CapsuleShape3D_urm88")

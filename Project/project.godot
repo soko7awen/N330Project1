@@ -11,18 +11,18 @@ config_version=5
 [application]
 
 config/name="Jester World"
-run/main_scene="res://main.tscn"
+run/main_scene="res://levels/courtyard/courtyard.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-GameController="*res://game_controller.gd"
+GameController="*res://globals/game_controller.gd"
 
 [dialogue_manager]
 
-general/balloon_path="res://dialogue_balloon/balloon.tscn"
+general/balloon_path="res://menus/dialogue_balloon/balloon.tscn"
 
 [editor_plugins]
 

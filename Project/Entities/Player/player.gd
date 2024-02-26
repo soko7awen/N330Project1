@@ -1,5 +1,5 @@
 extends CharacterBody3D
-class_name player
+class_name Player
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -8,7 +8,7 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
-	GameController.movement = true
+	GameController.player_movement = true
 
 func _unhandled_input(event):
 	if Input.is_action_just_pressed("interact"):
@@ -18,7 +18,7 @@ func _unhandled_input(event):
 			return
 
 func _physics_process(delta):
-	if GameController.movement == true:
+	if GameController.player_movement == true:
 		# Add the gravity.
 		if not is_on_floor():
 			velocity.y -= gravity * delta
