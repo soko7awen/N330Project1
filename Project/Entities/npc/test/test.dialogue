@@ -1,0 +1,27 @@
+~ start
+
+Penguin: [[yo|sup|hey]].
+Decide.
+- OMG ARE YOU PENGIN FROM CUB PENGIN
+	Penguin: yup
+- Second one
+	Penguin: You picked the second one.
+- Start again => start
+- End the conversation => END
+
+
+=> END
+
+~ start2
+
+Penguin: [[y|sus|heh]].
+Decide.
+- OMG ARE YOU PENGIN FROM CUB PENGIN
+	Penguin: yup
+- Second one
+	Penguin: You picked the second one.
+- Start again => start
+- End the conversation => END
+
+
+=> END

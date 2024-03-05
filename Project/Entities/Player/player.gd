@@ -17,6 +17,13 @@ func _unhandled_input(event):
 			actionables[0].action()
 			return
 
+func _input(event):
+	if event.is_action_pressed("pause"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		var pause_menu_scene = load("res://menus/pause_menu/pause_menu.tscn").instantiate()
+		get_tree().root.add_child(pause_menu_scene)
+		get_tree().paused = true
+
 func _physics_process(delta):
 	if GameController.player_movement == true:
 		# Add the gravity.
