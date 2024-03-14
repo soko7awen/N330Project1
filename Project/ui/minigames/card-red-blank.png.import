@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcpsq6o5urdhu"
-path="res://.godot/imported/card-black-king.png-677522decb2bcd76cb62fb0b54d46d1e.ctex"
+uid="uid://dlt2payjoxy48"
+path="res://.godot/imported/card-red-blank.png-4de390f609cf234ad468e3f0767e1adf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/theme_default/assets/minigames/card-black-king.png"
-dest_files=["res://.godot/imported/card-black-king.png-677522decb2bcd76cb62fb0b54d46d1e.ctex"]
+source_file="res://ui/minigames/card-red-blank.png"
+dest_files=["res://.godot/imported/card-red-blank.png-4de390f609cf234ad468e3f0767e1adf.ctex"]
 
 [params]
 

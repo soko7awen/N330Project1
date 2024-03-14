@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcv5xytbrkpk1"
-path="res://.godot/imported/card-blank.png-46d95ff3e8859f7f4fbe2e0284ea492c.ctex"
+uid="uid://bvcf0ljsk5pwr"
+path="res://.godot/imported/card-red-king.png-db0566a166487ad76566c5d186923faa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/theme_default/assets/minigames/card-blank.png"
-dest_files=["res://.godot/imported/card-blank.png-46d95ff3e8859f7f4fbe2e0284ea492c.ctex"]
+source_file="res://ui/minigames/card-red-king.png"
+dest_files=["res://.godot/imported/card-red-king.png-db0566a166487ad76566c5d186923faa.ctex"]
 
 [params]
 

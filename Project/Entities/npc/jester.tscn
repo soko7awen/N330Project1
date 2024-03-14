@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://dlr1epvq1p5i5"]
+
+[ext_resource type="Script" path="res://entities/npc/test/test.gd" id="1_feo00"]
+[ext_resource type="Texture2D" uid="uid://bg4telqld6o8h" path="res://entities/npc/jester_crying/jester_crying1_alt.png" id="2_3mmty"]
+[ext_resource type="Texture2D" uid="uid://bt7m2cyoc35bc" path="res://entities/npc/jester_crying/jester_crying1.png" id="3_d4flw"]
+[ext_resource type="PackedScene" uid="uid://nnn862ac5bq0" path="res://menus/dialogue_balloon/actionable.tscn" id="3_lx8tb"]
+[ext_resource type="Resource" uid="uid://bdl1emxhq3lvv" path="res://entities/npc/test/test.dialogue" id="4_7yvvi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdrci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3mmty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d4flw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_urm88"]
+height = 3.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c2521"]
+radius = 1.0
+
+[node name="JesterCrying" type="CharacterBody3D"]
+script = ExtResource("1_feo00")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_wdrci")
+autoplay = "default"
+frame_progress = 0.134696
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+shape = SubResource("CapsuleShape3D_urm88")
+
+[node name="Actionable" parent="." instance=ExtResource("3_lx8tb")]
+dialogue_resource = ExtResource("4_7yvvi")
+dialogue_start = "start2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Actionable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("SphereShape3D_c2521")

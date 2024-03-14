@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biou2sdomewi5"
-path="res://.godot/imported/card-black-joker.png-f1b8a00445c27144c829d298a1351bfe.ctex"
+uid="uid://cgwe5oig34g15"
+path="res://.godot/imported/card-black-blank.png-6c50199d068c961b01a2319f361326ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/theme_default/assets/minigames/card-black-joker.png"
-dest_files=["res://.godot/imported/card-black-joker.png-f1b8a00445c27144c829d298a1351bfe.ctex"]
+source_file="res://ui/minigames/card-black-blank.png"
+dest_files=["res://.godot/imported/card-black-blank.png-6c50199d068c961b01a2319f361326ef.ctex"]
 
 [params]
 

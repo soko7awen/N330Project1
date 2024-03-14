@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dei7nhbtwn3v1"]
+[gd_scene load_steps=5 format=3 uid="uid://dei7nhbtwn3v1"]
 
 [ext_resource type="Script" path="res://menus/pause_menu/pause_menu.gd" id="1_dn1ki"]
+[ext_resource type="Texture2D" uid="uid://dxxfq31s6vjwy" path="res://ui/theme_default/assets/begingame-button.png" id="2_nj2en"]
+[ext_resource type="Texture2D" uid="uid://bmehis08emuaf" path="res://ui/theme_default/assets/begingame-click.png" id="3_uvbex"]
+[ext_resource type="Texture2D" uid="uid://dsfi0j3pjupai" path="res://ui/theme_default/assets/begingame-hover.png" id="4_soesd"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
@@ -8,6 +11,7 @@ layer = 101
 script = ExtResource("1_dn1ki")
 
 [node name="Control" type="Control" parent="."]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,19 +28,30 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.145098, 0.145098, 0.145098, 0.592157)
 
-[node name="Unpause" type="Button" parent="Control"]
+[node name="Unpause" type="TextureButton" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -38.5
+offset_left = -80.0
 offset_top = -15.5
-offset_right = 38.5
+offset_right = 80.0
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Unpause"
+texture_normal = ExtResource("2_nj2en")
+texture_pressed = ExtResource("3_uvbex")
+texture_hover = ExtResource("4_soesd")
+
+[node name="Label" type="Label" parent="Control/Unpause"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Control/Unpause" to="." method="_on_unpause_pressed"]
