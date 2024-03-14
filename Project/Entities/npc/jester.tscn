@@ -1,22 +1,86 @@
-[gd_scene load_steps=9 format=3 uid="uid://dlr1epvq1p5i5"]
+[gd_scene load_steps=18 format=3 uid="uid://dlr1epvq1p5i5"]
 
-[ext_resource type="Script" path="res://entities/npc/test/test.gd" id="1_feo00"]
 [ext_resource type="Texture2D" uid="uid://bg4telqld6o8h" path="res://entities/npc/jester_crying/jester_crying1_alt.png" id="2_3mmty"]
 [ext_resource type="Texture2D" uid="uid://bt7m2cyoc35bc" path="res://entities/npc/jester_crying/jester_crying1.png" id="3_d4flw"]
+[ext_resource type="Texture2D" uid="uid://b0v6a4glivqxt" path="res://entities/npc/jester_crying/jester_crying4.png" id="3_kr880"]
 [ext_resource type="PackedScene" uid="uid://nnn862ac5bq0" path="res://menus/dialogue_balloon/actionable.tscn" id="3_lx8tb"]
-[ext_resource type="Resource" uid="uid://bdl1emxhq3lvv" path="res://entities/npc/test/test.dialogue" id="4_7yvvi"]
+[ext_resource type="Resource" uid="uid://btimj74ipmlq1" path="res://entities/npc/jester_crying/jester_crying.dialogue" id="4_3de64"]
+[ext_resource type="Texture2D" uid="uid://kyhlhuqcdfu4" path="res://entities/npc/jester_crying/jester_crying4_alt.png" id="4_7u5ox"]
+[ext_resource type="Texture2D" uid="uid://flosv63uuwky" path="res://entities/npc/jester_large/jester_large1.png" id="5_ourov"]
+[ext_resource type="Texture2D" uid="uid://c4j0n6citvymx" path="res://entities/npc/jester_large/jester_large1_alt.png" id="6_o8ia0"]
+[ext_resource type="Texture2D" uid="uid://0gcu6f4q85xl" path="res://entities/npc/jester_large/jester_large4.png" id="7_8ils7"]
+[ext_resource type="Texture2D" uid="uid://bmoppaymhkoqj" path="res://entities/npc/jester_large/jester_large4_alt.png" id="8_kqjnf"]
+[ext_resource type="Texture2D" uid="uid://cees3k2ln8tcj" path="res://entities/npc/jester_shuffling/jester_shuffling1.png" id="9_lgh8d"]
+[ext_resource type="Texture2D" uid="uid://bvujrkvk5npgt" path="res://entities/npc/jester_shuffling/jester_shuffling1_alt.png" id="10_x3a1i"]
+[ext_resource type="Texture2D" uid="uid://cem8hk23bs0xq" path="res://entities/npc/jester_shuffling/jester_shuffling4.png" id="11_q8l8n"]
+[ext_resource type="Texture2D" uid="uid://juyhyairr151" path="res://entities/npc/jester_shuffling/jester_shuffling4_alt.png" id="12_la5j3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wdrci"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_3mmty")
+"texture": ExtResource("3_d4flw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_d4flw")
+"texture": ExtResource("2_3mmty")
 }],
 "loop": true,
-"name": &"default",
+"name": &"jester_crying",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kr880")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7u5ox")
+}],
+"loop": true,
+"name": &"jester_crying4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ourov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o8ia0")
+}],
+"loop": true,
+"name": &"jester_large",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_8ils7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kqjnf")
+}],
+"loop": true,
+"name": &"jester_large4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_lgh8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_x3a1i")
+}],
+"loop": true,
+"name": &"jester_shuffling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_q8l8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_la5j3")
+}],
+"loop": true,
+"name": &"jester_shuffling4",
 "speed": 5.0
 }]
 
@@ -27,23 +91,20 @@ height = 3.0
 radius = 1.0
 
 [node name="JesterCrying" type="CharacterBody3D"]
-script = ExtResource("1_feo00")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_wdrci")
-autoplay = "default"
-frame_progress = 0.134696
+animation = &"jester_crying"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 shape = SubResource("CapsuleShape3D_urm88")
 
 [node name="Actionable" parent="." instance=ExtResource("3_lx8tb")]
-dialogue_resource = ExtResource("4_7yvvi")
-dialogue_start = "start2"
+dialogue_resource = ExtResource("4_3de64")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Actionable"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
