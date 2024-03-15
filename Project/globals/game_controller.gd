@@ -1,5 +1,13 @@
 extends Node
 var player_movement = false
+var state = null
+var stateNode = null
+
+func _process(_delta):
+	if state != null:
+		if state == 'riddle_success':
+			get_node('../main/'+stateNode).collision_layer = 0
+		state = null
 
 func set_player_movement(value: bool):
 	if value == true:
