@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 [gd_scene load_steps=10 format=3 uid="uid://b4knno112x3b8"]
+=======
+[gd_scene load_steps=8 format=3 uid="uid://b4knno112x3b8"]
+>>>>>>> 44d49bf0a9a4ff4fa462d75780a6ef95e0d51a1b
 
 [ext_resource type="MeshLibrary" uid="uid://bob20ly1g7v0s" path="res://levels/courtyard/assets/gridmap_meshes.tres" id="1_e31pl"]
 [ext_resource type="PackedScene" uid="uid://do6aanqyxkdet" path="res://entities/player/player.tscn" id="2_p6dcn"]
 [ext_resource type="PackedScene" uid="uid://dlr1epvq1p5i5" path="res://entities/npc/jester.tscn" id="3_4gvby"]
+<<<<<<< HEAD
 [ext_resource type="Resource" uid="uid://b3p32ke6ri8dn" path="res://entities/npc/jester_large/jester_large.dialogue" id="4_l141n"]
 [ext_resource type="Resource" uid="uid://7mhauix8uowk" path="res://entities/npc/jester_crying/jester_crying4.dialogue" id="4_wqcfd"]
 [ext_resource type="Resource" uid="uid://bj5mt4m688ohf" path="res://entities/npc/jester_large/jester_large4.dialogue" id="6_usb6v"]
+=======
+[ext_resource type="Resource" uid="uid://7mhauix8uowk" path="res://entities/npc/jester_crying/jester_crying4.dialogue" id="4_wqcfd"]
+>>>>>>> 44d49bf0a9a4ff4fa462d75780a6ef95e0d51a1b
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ploor"]
 sky_top_color = Color(0.701961, 0.745098, 1, 1)
@@ -61,9 +69,12 @@ transform = Transform3D(1, 0, 0, 0, 0.0895201, 0.995985, 0, -0.995985, 0.0895201
 [node name="AnimatedSprite3D" parent="JesterLarge" index="0"]
 animation = &"jester_large"
 
+<<<<<<< HEAD
 [node name="Actionable" parent="JesterLarge" index="2"]
 dialogue_resource = ExtResource("4_l141n")
 
+=======
+>>>>>>> 44d49bf0a9a4ff4fa462d75780a6ef95e0d51a1b
 [node name="JesterCrying4" parent="." instance=ExtResource("3_4gvby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.27098, 1.72887, -10.5017)
 
@@ -73,15 +84,24 @@ animation = &"jester_crying4"
 [node name="Actionable" parent="JesterCrying4" index="2"]
 dialogue_resource = ExtResource("4_wqcfd")
 
+<<<<<<< HEAD
+=======
+[node name="CollisionShape3D" parent="JesterCrying4/Actionable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+>>>>>>> 44d49bf0a9a4ff4fa462d75780a6ef95e0d51a1b
 [node name="JesterLarge4" parent="." instance=ExtResource("3_4gvby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5333, 1.72887, -19.9667)
 
 [node name="AnimatedSprite3D" parent="JesterLarge4" index="0"]
 animation = &"jester_large4"
 
+<<<<<<< HEAD
 [node name="Actionable" parent="JesterLarge4" index="2"]
 dialogue_resource = ExtResource("6_usb6v")
 
+=======
+>>>>>>> 44d49bf0a9a4ff4fa462d75780a6ef95e0d51a1b
 [node name="JesterShuffling4" parent="." instance=ExtResource("3_4gvby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.57697, 1.72887, -23.351)
 
