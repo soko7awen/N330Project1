@@ -1,20 +1,28 @@
 extends Node
 var player_movement = false
-var state = null
-var state_node = null
-var jester_points
+var state_empty = {
+	'node': null,
+	'event': null,
+	'level': 1
+	}
+var state = {
+	'node': null,
+	'event': null,
+	'level': 1
+	}
+var jester_score = 0
 
 func _process(_delta):
-	if state != null:
-		if state == 'riddle_success':
-			get_node('../main/'+state_node).collision_layer = 0
-		elif state == 'shuffle_minigame':
-			print(get_node('../main/'+state_node))
-		elif state == 'strength_minigame':
-			print(get_node('../main/'+state_node))
-		elif state == 'boss_minigame':
-			print(get_node('../main/'+state_node))
-		state = null
+	if state.event != null:
+		if state.event == 'riddle_success':
+			get_node('../main/'+state.node).collision_layer = 0
+		elif state.event == 'shuffle_minigame':
+			print(get_node('../main/'+state.node))
+		elif state.event == 'strength_minigame':
+			print(get_node('../main/'+state.node))
+		elif state.event == 'boss_minigame':
+			print(get_node('../main/'+state.node))
+		state = state_empty
 
 func set_player_movement(value: bool):
 	if value == true:
