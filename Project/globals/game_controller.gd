@@ -7,11 +7,8 @@ func _process(_delta):
 	if state != null:
 		if state == 'riddle_success':
 			get_node('../main/'+stateNode).collision_layer = 0
-<<<<<<< HEAD
 		elif state == 'strength':
 			print(get_node('../main/'+stateNode))
-=======
->>>>>>> 44d49bf0a9a4ff4fa462d75780a6ef95e0d51a1b
 		state = null
 
 func set_player_movement(value: bool):
