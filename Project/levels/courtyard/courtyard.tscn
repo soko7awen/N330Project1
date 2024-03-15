@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b4knno112x3b8"]
 
 [ext_resource type="MeshLibrary" uid="uid://bob20ly1g7v0s" path="res://levels/courtyard/assets/gridmap_meshes.tres" id="1_e31pl"]
-[ext_resource type="PackedScene" uid="uid://do6aanqyxkdet" path="res://entities/Player/player.tscn" id="2_p6dcn"]
+[ext_resource type="PackedScene" uid="uid://do6aanqyxkdet" path="res://entities/player/player.tscn" id="2_p6dcn"]
 [ext_resource type="PackedScene" uid="uid://dlr1epvq1p5i5" path="res://entities/npc/jester.tscn" id="3_4gvby"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ploor"]
