@@ -85,8 +85,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_urm88"]
-radius = 1.2
-height = 4.0
+height = 3.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c2521"]
 radius = 1.0
