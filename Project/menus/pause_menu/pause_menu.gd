@@ -7,7 +7,7 @@ func _ready():
 	$Control/Unpause.grab_focus()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_released("pause") and unpause_cooldown == false:
 		unpause_cooldown = true
 	if unpause_cooldown == true and Input.is_action_pressed("pause"):

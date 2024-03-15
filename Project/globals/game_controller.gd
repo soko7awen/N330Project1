@@ -7,7 +7,7 @@ func _process(_delta):
 	if state != null:
 		if state == 'riddle_success':
 			get_node('../main/'+stateNode).collision_layer = 0
-		elif state == 'strength':
+		elif state == 'strength_minigame':
 			print(get_node('../main/'+stateNode))
 		state = null
 

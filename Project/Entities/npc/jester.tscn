@@ -10,10 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://beobed5vytlto" path="res://entities/npc/jester_large/jester_large1_alt.png" id="6_o8ia0"]
 [ext_resource type="Texture2D" uid="uid://dyw4sjpd1ir3m" path="res://entities/npc/jester_large/jester_large4.png" id="7_8ils7"]
 [ext_resource type="Texture2D" uid="uid://dgecvxqish1mo" path="res://entities/npc/jester_large/jester_large4_alt.png" id="8_kqjnf"]
-[ext_resource type="Texture2D" path="res://entities/npc/jester_shuffling/jester_shuffling1.png" id="9_lgh8d"]
-[ext_resource type="Texture2D" path="res://entities/npc/jester_shuffling/jester_shuffling1_alt.png" id="10_x3a1i"]
-[ext_resource type="Texture2D" path="res://entities/npc/jester_shuffling/jester_shuffling4.png" id="11_q8l8n"]
-[ext_resource type="Texture2D" path="res://entities/npc/jester_shuffling/jester_shuffling4_alt.png" id="12_la5j3"]
+[ext_resource type="Texture2D" uid="uid://p1dkt155brok" path="res://entities/npc/jester_shuffling/jester_shuffling1.png" id="9_lgh8d"]
+[ext_resource type="Texture2D" uid="uid://bs3py2g6nf6q4" path="res://entities/npc/jester_shuffling/jester_shuffling1_alt.png" id="10_x3a1i"]
+[ext_resource type="Texture2D" uid="uid://c1t40rhdqyaqn" path="res://entities/npc/jester_shuffling/jester_shuffling4.png" id="11_q8l8n"]
+[ext_resource type="Texture2D" uid="uid://djluxb6rl5poy" path="res://entities/npc/jester_shuffling/jester_shuffling4_alt.png" id="12_la5j3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wdrci"]
 animations = [{
