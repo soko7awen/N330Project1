@@ -1,6 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dlr1epvq1p5i5"]
+[gd_scene load_steps=20 format=3 uid="uid://dlr1epvq1p5i5"]
 
+[ext_resource type="Texture2D" uid="uid://b8pmerk6blw8f" path="res://entities/npc/jester_boss/jester_boss.png" id="1_h5c7h"]
 [ext_resource type="Texture2D" uid="uid://bg4telqld6o8h" path="res://entities/npc/jester_crying/jester_crying1_alt.png" id="2_3mmty"]
+[ext_resource type="Texture2D" uid="uid://8sc36a7sq502" path="res://entities/npc/jester_boss/jester_boss_alt.png" id="2_xiadg"]
 [ext_resource type="Texture2D" uid="uid://bt7m2cyoc35bc" path="res://entities/npc/jester_crying/jester_crying1.png" id="3_d4flw"]
 [ext_resource type="Texture2D" uid="uid://b0v6a4glivqxt" path="res://entities/npc/jester_crying/jester_crying4.png" id="3_kr880"]
 [ext_resource type="PackedScene" uid="uid://nnn862ac5bq0" path="res://menus/dialogue_balloon/actionable.tscn" id="3_lx8tb"]
@@ -17,6 +19,17 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wdrci"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h5c7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xiadg")
+}],
+"loop": true,
+"name": &"jester_boss",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_d4flw")

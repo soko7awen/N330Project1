@@ -1,14 +1,19 @@
 extends Node
 var player_movement = false
 var state = null
-var stateNode = null
+var state_node = null
+var jester_points
 
 func _process(_delta):
 	if state != null:
 		if state == 'riddle_success':
-			get_node('../main/'+stateNode).collision_layer = 0
+			get_node('../main/'+state_node).collision_layer = 0
+		elif state == 'shuffle_minigame':
+			print(get_node('../main/'+state_node))
 		elif state == 'strength_minigame':
-			print(get_node('../main/'+stateNode))
+			print(get_node('../main/'+state_node))
+		elif state == 'boss_minigame':
+			print(get_node('../main/'+state_node))
 		state = null
 
 func set_player_movement(value: bool):
