@@ -1,21 +1,21 @@
 [gd_scene load_steps=20 format=3 uid="uid://dlr1epvq1p5i5"]
 
-[ext_resource type="Texture2D" uid="uid://b8pmerk6blw8f" path="res://entities/npc/jester_boss/jester_boss.png" id="1_h5c7h"]
+[ext_resource type="Texture2D" uid="uid://4hdx7f7k7v87" path="res://entities/npc/jester_boss/jester_boss.png" id="1_h5c7h"]
 [ext_resource type="Texture2D" uid="uid://bg4telqld6o8h" path="res://entities/npc/jester_crying/jester_crying1_alt.png" id="2_3mmty"]
-[ext_resource type="Texture2D" uid="uid://8sc36a7sq502" path="res://entities/npc/jester_boss/jester_boss_alt.png" id="2_xiadg"]
+[ext_resource type="Texture2D" uid="uid://dk8c3rfyk8htt" path="res://entities/npc/jester_boss/jester_boss_alt.png" id="2_xiadg"]
 [ext_resource type="Texture2D" uid="uid://bt7m2cyoc35bc" path="res://entities/npc/jester_crying/jester_crying1.png" id="3_d4flw"]
 [ext_resource type="Texture2D" uid="uid://b0v6a4glivqxt" path="res://entities/npc/jester_crying/jester_crying4.png" id="3_kr880"]
 [ext_resource type="PackedScene" uid="uid://nnn862ac5bq0" path="res://menus/dialogue_balloon/actionable.tscn" id="3_lx8tb"]
-[ext_resource type="Resource" uid="uid://d0btkyruskhjr" path="res://entities/npc/jester_crying/jester_crying.dialogue" id="4_3de64"]
+[ext_resource type="Resource" uid="uid://l4i66i1yg2w" path="res://entities/npc/jester_crying/jester_crying.dialogue" id="4_3de64"]
 [ext_resource type="Texture2D" uid="uid://kyhlhuqcdfu4" path="res://entities/npc/jester_crying/jester_crying4_alt.png" id="4_7u5ox"]
-[ext_resource type="Texture2D" uid="uid://cnuvkpkh30ijs" path="res://entities/npc/jester_large/jester_large1.png" id="5_ourov"]
-[ext_resource type="Texture2D" uid="uid://beobed5vytlto" path="res://entities/npc/jester_large/jester_large1_alt.png" id="6_o8ia0"]
-[ext_resource type="Texture2D" uid="uid://dyw4sjpd1ir3m" path="res://entities/npc/jester_large/jester_large4.png" id="7_8ils7"]
-[ext_resource type="Texture2D" uid="uid://dgecvxqish1mo" path="res://entities/npc/jester_large/jester_large4_alt.png" id="8_kqjnf"]
-[ext_resource type="Texture2D" uid="uid://p1dkt155brok" path="res://entities/npc/jester_shuffling/jester_shuffling1.png" id="9_lgh8d"]
-[ext_resource type="Texture2D" uid="uid://bs3py2g6nf6q4" path="res://entities/npc/jester_shuffling/jester_shuffling1_alt.png" id="10_x3a1i"]
-[ext_resource type="Texture2D" uid="uid://c1t40rhdqyaqn" path="res://entities/npc/jester_shuffling/jester_shuffling4.png" id="11_q8l8n"]
-[ext_resource type="Texture2D" uid="uid://djluxb6rl5poy" path="res://entities/npc/jester_shuffling/jester_shuffling4_alt.png" id="12_la5j3"]
+[ext_resource type="Texture2D" uid="uid://cva8sxxt4mou2" path="res://entities/npc/jester_large/jester_large1.png" id="5_ourov"]
+[ext_resource type="Texture2D" uid="uid://dal7ndtbr0snj" path="res://entities/npc/jester_large/jester_large1_alt.png" id="6_o8ia0"]
+[ext_resource type="Texture2D" uid="uid://bo88uboon7js8" path="res://entities/npc/jester_large/jester_large4.png" id="7_8ils7"]
+[ext_resource type="Texture2D" uid="uid://byoo0f5yeveg6" path="res://entities/npc/jester_large/jester_large4_alt.png" id="8_kqjnf"]
+[ext_resource type="Texture2D" uid="uid://c1pfidl0ru44g" path="res://entities/npc/jester_shuffling/jester_shuffling1.png" id="9_lgh8d"]
+[ext_resource type="Texture2D" uid="uid://dqoq5eawx3mqg" path="res://entities/npc/jester_shuffling/jester_shuffling1_alt.png" id="10_x3a1i"]
+[ext_resource type="Texture2D" uid="uid://67iido623bvj" path="res://entities/npc/jester_shuffling/jester_shuffling4.png" id="11_q8l8n"]
+[ext_resource type="Texture2D" uid="uid://8past4lqcpbc" path="res://entities/npc/jester_shuffling/jester_shuffling4_alt.png" id="12_la5j3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wdrci"]
 animations = [{
@@ -115,6 +115,7 @@ animation = &"jester_crying"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
 shape = SubResource("CapsuleShape3D_urm88")
+disabled = true
 
 [node name="Actionable" parent="." instance=ExtResource("3_lx8tb")]
 dialogue_resource = ExtResource("4_3de64")

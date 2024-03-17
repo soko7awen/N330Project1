@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://67iido623bvj"
-path="res://.godot/imported/jester_shuffling4.png-7372d9a9f051f91de23db55fbe33bc2d.ctex"
+uid="uid://8past4lqcpbc"
+path="res://.godot/imported/jester_shuffling4_alt.png-98430d9cf89e9175e471b4fe9f0e1f38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/npc/jester_shuffling/jester_shuffling4.png"
-dest_files=["res://.godot/imported/jester_shuffling4.png-7372d9a9f051f91de23db55fbe33bc2d.ctex"]
+source_file="res://entities/npc/jester_shuffling/jester_shuffling4_alt.png"
+dest_files=["res://.godot/imported/jester_shuffling4_alt.png-98430d9cf89e9175e471b4fe9f0e1f38.ctex"]
 
 [params]
 
