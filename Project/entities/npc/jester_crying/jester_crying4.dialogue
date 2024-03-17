@@ -3,7 +3,7 @@ Jester: riddle?
 Decide.
 - yes
 	set GameController.state.node = "JesterCrying4"
-	set GameController.state.level = "2"
+	set GameController.state.level = 2
 	Jester: riddle.
 	- option a
 		Jester: that is correct!

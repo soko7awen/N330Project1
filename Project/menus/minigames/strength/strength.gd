@@ -2,13 +2,15 @@ extends Control
 var level = 2
 var ticks = 0
 var enemy_slowness = 12
+var enemy_speed = 50
 var player_strength = 1000
 var space_presses = []
 signal ended(node)
 
 func _ready():
 	if level == 2:
-		enemy_slowness = 24
+		enemy_slowness = 12
+		enemy_speed = 20
 		$Hands/ArmEnemy.texture = load("res://menus/minigames/strength/minigame-arm-jester-4.png")
 
 func _process(delta):
@@ -32,4 +34,4 @@ func _process(delta):
 			$Hands.position.x -= player_strength * delta
 			space_presses = []
 		ticks = 0
-	$Hands.position.x += 50 * delta
+	$Hands.position.x += enemy_speed*2 * delta

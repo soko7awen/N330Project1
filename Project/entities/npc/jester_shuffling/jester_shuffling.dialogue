@@ -3,7 +3,7 @@ Jester: card shuffle?
 Decide.
 - yes
 	set GameController.state.node = "JesterBoss"
-	set GameController.state.level = "1"
+	set GameController.state.level = 1
 	set GameController.state.event = "boss_minigame"
 - no
 	Jester: fine then

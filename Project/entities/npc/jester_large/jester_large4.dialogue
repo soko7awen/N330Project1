@@ -3,7 +3,7 @@ Jester: card wrestle?
 Decide.
 - yes
 	set GameController.state.node = "JesterLarge4"
-	set GameController.state.level = "2"
+	set GameController.state.level = 2
 	set GameController.state.event = "strength_minigame"
 - no
 	Jester: fine then
