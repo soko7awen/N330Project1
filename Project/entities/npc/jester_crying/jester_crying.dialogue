@@ -6,10 +6,10 @@ Decide.
 	set GameController.state.level = "1"
 	Jester: riddle.
 	- option a
-		Jester: correct!
+		Jester: that is correct!
 		set GameController.state.event = "riddle_won"
 	- option b
-		Jester: incorrect!
+		Jester: that is incorrect!
 		set GameController.state.event = "riddle_lose"
 - no
 	Jester: fine then

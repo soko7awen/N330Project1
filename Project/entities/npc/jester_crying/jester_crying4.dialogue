@@ -11,6 +11,9 @@ Decide.
 	- option b
 		Jester: that is incorrect!
 		set GameController.state.event = "riddle_lose"
+	- option c
+		Jester: that is incorrect!
+		set GameController.state.event = "riddle_lose"
 - no
 	Jester: fine then
 => END
