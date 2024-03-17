@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c31mfvhdu6o4k"
-path="res://.godot/imported/jester_crying2_alt.png-7718654ce51d937f9a6dc7809d00cd0c.ctex"
+path="res://.godot/imported/jester_crying2_alt.png-cf5046e82ffad39cc2344c2d63952e91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/npc/jester_crying/jester_crying2_alt.png"
-dest_files=["res://.godot/imported/jester_crying2_alt.png-7718654ce51d937f9a6dc7809d00cd0c.ctex"]
+source_file="res://entities/npc/jester_crying/jester_crying2_alt.png"
+dest_files=["res://.godot/imported/jester_crying2_alt.png-cf5046e82ffad39cc2344c2d63952e91.ctex"]
 
 [params]
 
