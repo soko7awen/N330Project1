@@ -23,6 +23,7 @@ func _process(_delta):
 			if player_movement == true:
 				set_player_movement(false)
 				var minigame_node = load("res://menus/minigames/strength/strength.tscn").instantiate()
+				minigame_node.level = state.level
 				$/root/main/CanvasLayer.add_child(minigame_node)
 				minigame_node.ended.connect(_on_minigame_ended)
 				print(get_node('../main/'+state.node))
