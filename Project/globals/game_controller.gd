@@ -1,10 +1,5 @@
 extends Node
 var player_movement = false
-const state_empty = {
-	'node': null,
-	'event': null,
-	'level': 1
-	}
 var state = {
 	'node': null,
 	'event': null,
@@ -30,7 +25,9 @@ func _process(_delta):
 				print(get_node('../main/'+state.node))
 		elif state.event == 'boss_minigame':
 			print(get_node('../main/'+state.node))
-		state = state_empty
+		state.node = null
+		state.event = null
+		state.level = 1
 
 func set_player_movement(value: bool):
 	if value == true:
