@@ -1,0 +1,18 @@
+~ start
+Jester: card shuffle?
+Decide.
+- yes
+	set GameController.state.node = "JesterShuffling4"
+	set GameController.state.level = "2"
+	set GameController.state.event = "shuffling_minigame"
+- no
+	Jester: fine then
+=> END
+
+~ win
+Jester: you have bested me
+=> END
+
+~ lose
+Jester: you have not bested me
+=> END

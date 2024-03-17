@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ebf2om7fxnc6"
+path="res://.godot/imported/jester_shuffling.dialogue-c65c056a345a19ef08f65abd6462e7c4.tres"
+
+[deps]
+
+source_file="res://entities/npc/jester_shuffling/jester_shuffling.dialogue"
+dest_files=["res://.godot/imported/jester_shuffling.dialogue-c65c056a345a19ef08f65abd6462e7c4.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,342 @@
+[gd_scene load_steps=11 format=3 uid="uid://ddayf144e52yp"]
+
+[ext_resource type="Texture2D" uid="uid://c7rya6q3q3riw" path="res://menus/minigames/shuffle/card-red-joker.png" id="1_ctcht"]
+[ext_resource type="Script" path="res://menus/minigames/shuffle/shuffle.gd" id="1_kxjde"]
+
+[sub_resource type="Animation" id="Animation_hto3k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cards/Card1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(121, 400)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cards/Card2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(347, 246)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cards/Card3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(574, 187)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cards/Card4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(800, 246)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Cards/Card0:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1027, 400)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Cards/Card1:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Cards/Card1:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ctcht")]
+}
+
+[sub_resource type="Animation" id="Animation_e6b1b"]
+resource_name = "Card0"
+length = 4.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cards/Card0:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 3.8, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1027, 400), Vector2(733, 476), Vector2(439, 363), Vector2(385, 178), Vector2(654, 173), Vector2(950, 242), Vector2(1000, 412), Vector2(712, 446), Vector2(739, 347), Vector2(1027, 400)]
+}
+
+[sub_resource type="Animation" id="Animation_p3phr"]
+resource_name = "Card1"
+length = 4.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cards/Card1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.7, 3.5, 4, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(117, 397), Vector2(450, 64), Vector2(612, 282), Vector2(813, 475), Vector2(487, 484), Vector2(219, 436), Vector2(240, 140), Vector2(324, 254), Vector2(117, 397)]
+}
+
+[sub_resource type="Animation" id="Animation_3ssho"]
+resource_name = "Card2"
+length = 4.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cards/Card2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(347, 246), Vector2(547, 367), Vector2(877, 379), Vector2(381, 441), Vector2(220, 234), Vector2(550, 179), Vector2(775, 194), Vector2(911, 342), Vector2(598, 494), Vector2(347, 246)]
+}
+
+[sub_resource type="Animation" id="Animation_t3qpc"]
+resource_name = "Card3"
+length = 4.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cards/Card3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(574, 187), Vector2(413, 335), Vector2(231, 179), Vector2(483, 129), Vector2(606, 220), Vector2(793, 400), Vector2(546, 480), Vector2(364, 401), Vector2(574, 187)]
+}
+
+[sub_resource type="Animation" id="Animation_jgljh"]
+resource_name = "Card4"
+length = 4.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cards/Card4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(800, 246), Vector2(953, 377), Vector2(755, 476), Vector2(555, 439), Vector2(368, 378), Vector2(390, 215), Vector2(703, 180), Vector2(940, 232), Vector2(800, 246)]
+}
+
+[sub_resource type="Animation" id="Animation_dxbb8"]
+resource_name = "flip"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cards/Card1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(121, 400)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cards/Card1:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(1e-05, 2), Vector2(2, 2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cards/Card1:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ctcht")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_icdmm"]
+_data = {
+"Card0": SubResource("Animation_e6b1b"),
+"Card1": SubResource("Animation_p3phr"),
+"Card2": SubResource("Animation_3ssho"),
+"Card3": SubResource("Animation_t3qpc"),
+"Card4": SubResource("Animation_jgljh"),
+"RESET": SubResource("Animation_hto3k"),
+"flip": SubResource("Animation_dxbb8")
+}
+
+[node name="Shuffle" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kxjde")
+
+[node name="Cards" type="Node2D" parent="."]
+
+[node name="Card0" type="Sprite2D" parent="Cards"]
+position = Vector2(1027, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ctcht")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cards/Card0"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_icdmm")
+}
+
+[node name="Timer" type="Timer" parent="Cards/Card0"]
+one_shot = true
+
+[node name="Card1" type="Sprite2D" parent="Cards"]
+position = Vector2(121, 400)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ctcht")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cards/Card1"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_icdmm")
+}
+
+[node name="Timer" type="Timer" parent="Cards/Card1"]
+one_shot = true
+
+[node name="Card2" type="Sprite2D" parent="Cards"]
+position = Vector2(347, 246)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ctcht")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cards/Card2"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_icdmm")
+}
+
+[node name="Timer" type="Timer" parent="Cards/Card2"]
+one_shot = true
+
+[node name="Card3" type="Sprite2D" parent="Cards"]
+position = Vector2(574, 187)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ctcht")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cards/Card3"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_icdmm")
+}
+
+[node name="Timer" type="Timer" parent="Cards/Card3"]
+one_shot = true
+
+[node name="Card4" type="Sprite2D" parent="Cards"]
+position = Vector2(800, 246)
+scale = Vector2(2, 2)
+texture = ExtResource("1_ctcht")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cards/Card4"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_icdmm")
+}
+
+[node name="Timer" type="Timer" parent="Cards/Card4"]
+one_shot = true
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Marker0" type="Node2D" parent="Markers"]
+position = Vector2(1027, 400)
+scale = Vector2(2, 2)
+
+[node name="Marker1" type="Node2D" parent="Markers"]
+position = Vector2(121, 400)
+scale = Vector2(2, 2)
+
+[node name="Marker2" type="Node2D" parent="Markers"]
+position = Vector2(347, 246)
+scale = Vector2(2, 2)
+
+[node name="Marker3" type="Node2D" parent="Markers"]
+position = Vector2(574, 187)
+scale = Vector2(2, 2)
+
+[node name="Marker4" type="Node2D" parent="Markers"]
+position = Vector2(800, 246)
+scale = Vector2(2, 2)
+
+[connection signal="animation_finished" from="Cards/Card0/AnimationPlayer" to="." method="_on_animation0_finished"]
+[connection signal="timeout" from="Cards/Card0/Timer" to="." method="_on_timer0_timeout"]
+[connection signal="animation_finished" from="Cards/Card1/AnimationPlayer" to="." method="_on_animation1_finished"]
+[connection signal="timeout" from="Cards/Card1/Timer" to="." method="_on_timer1_timeout"]
+[connection signal="animation_finished" from="Cards/Card2/AnimationPlayer" to="." method="_on_animation2_finished"]
+[connection signal="timeout" from="Cards/Card2/Timer" to="." method="_on_timer2_timeout"]
+[connection signal="animation_finished" from="Cards/Card3/AnimationPlayer" to="." method="_on_animation3_finished"]
+[connection signal="timeout" from="Cards/Card3/Timer" to="." method="_on_timer3_timeout"]
+[connection signal="animation_finished" from="Cards/Card4/AnimationPlayer" to="." method="_on_animation4_finished"]
+[connection signal="timeout" from="Cards/Card4/Timer" to="." method="_on_timer4_timeout"]

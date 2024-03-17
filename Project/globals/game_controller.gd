@@ -11,10 +11,13 @@ func _process(_delta):
 	if state.event != null:
 		if state.event == 'riddle_won':
 			print('won')
+			state_clear()
 		elif state.event == 'riddle_lose':
 			print('lose')
+			state_clear()
 		elif state.event == 'shuffle_minigame':
 			print(get_node('../main/'+state.node))
+			state_clear()
 		elif state.event == 'strength_minigame':
 			if player_movement == true:
 				set_player_movement(false)
@@ -23,11 +26,11 @@ func _process(_delta):
 				$/root/main/CanvasLayer.add_child(minigame_node)
 				minigame_node.ended.connect(_on_minigame_ended)
 				print(get_node('../main/'+state.node))
+				state_clear()
 		elif state.event == 'boss_minigame':
 			print(get_node('../main/'+state.node))
-		state.node = null
-		state.event = null
-		state.level = 1
+			state_clear()
+
 
 func set_player_movement(value: bool):
 	if value == true:
@@ -39,3 +42,8 @@ func set_player_movement(value: bool):
 	
 func _on_minigame_ended(node):
 	node.queue_free()
+	
+func state_clear():
+	state.node = null
+	state.event = null
+	state.level = 1
