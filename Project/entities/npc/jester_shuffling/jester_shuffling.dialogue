@@ -1,18 +1,19 @@
 ~ start
-Jester: card shuffle?
-Decide.
-- yes
+Jester: Cards, cards, cards...!
+Jester: Think you can find the right one?
+Play his game?
+- Yes
 	set GameController.state.node = "JesterBoss"
 	set GameController.state.level = 1
 	set GameController.state.event = "boss_minigame"
-- no
-	Jester: fine then
+- No
+	Jester: Aww.... that's too bad!
 => END
 
 ~ win
-Jester: you have bested me
+Jester: How did you- I thought I was fast enough!
 => END
 
 ~ lose
-Jester: you have not bested me
+Jester: Aha... couldn't keep up!
 => END

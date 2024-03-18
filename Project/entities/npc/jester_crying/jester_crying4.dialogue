@@ -1,27 +1,30 @@
 ~ start
-Jester: riddle?
-Decide.
-- yes
+Jester: oh... i'm so upset!
+Jester: not a single person has been able to answer my riddle...!
+Answer the riddle?
+- Answer
 	set GameController.state.node = "JesterCrying4"
 	set GameController.state.level = 2
-	Jester: riddle.
-	- option a
-		Jester: that is correct!
+	Jester: ah...!
+	Jester: what comes once a minute, twice a moment, but never in a thousand years...?
+	- The letter "m"
+		Jester: w-wah...! that's... that's correct!
 		set GameController.state.event = "riddle_won"
-	- option b
-		Jester: that is incorrect!
+	- 1/1000 of a decade
+		Jester: incorrect...
 		set GameController.state.event = "riddle_lose"
-	- option c
-		Jester: that is incorrect!
+	- Happiness
+		Jester: incorrect... and i thought i was gloomy....
 		set GameController.state.event = "riddle_lose"
-- no
-	Jester: fine then
+- Don't answer
+	Jester: gh- i.... i see!
 => END
 
 ~ win
-Jester: you have bested me
+Jester: you did it, but....
+Jester: oh I'm still so upset!!
 => END
 
 ~ lose
-Jester: you have not bested me
+Jester: n-no! i thought you might be the one to finally get it...
 => END

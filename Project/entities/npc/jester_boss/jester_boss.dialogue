@@ -1,18 +1,21 @@
 ~ start
-Jester: card shuffle?
-Decide.
-- yes
+Jester: Oh ho ho...! Made it this far, have we?
+Jester: I see that you intend to fight for my place as High Jester to the King.
+Jester: Are you ready to face me?
+Face the Head Jester?
+- Yes!
 	set GameController.state.node = "JesterShuffling"
 	set GameController.state.level = "1"
 	set GameController.state.event = "shuffling_minigame"
-- no
-	Jester: fine then
+- No!
+	Jester: Naturally! I, too, would be scared...
 => END
 
 ~ win
-Jester: you have bested me
+Jester: Agh-! You.... what?! This can't be...!
 => END
 
 ~ lose
-Jester: you have not bested me
+Jester: Oh ho ho ho!
+Jester: Well, of course! Your puny self didn't even stand a chance...
 => END

@@ -1,18 +1,19 @@
 ~ start
-Jester: card wrestle?
-Decide.
-- yes
+Jester: I'm simply the strongest jester alive!
+Jester: No one in the world has ever beat me!
+Fight?
+- Yes
 	set GameController.state.node = "JesterLarge4"
 	set GameController.state.level = 2
 	set GameController.state.event = "strength_minigame"
-- no
-	Jester: fine then
+- No
+	Jester: Aww... not even going to try?
 => END
 
 ~ win
-Jester: you have bested me
+Jester: Wh... What?!
 => END
 
 ~ lose
-Jester: you have not bested me
+Jester: See! What did I tell you!
 => END

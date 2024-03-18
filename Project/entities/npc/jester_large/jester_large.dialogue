@@ -1,18 +1,19 @@
 ~ start
-Jester: card wrestle?
-Decide.
-- yes
+Jester: Hey.
+Jester: Wanna tussle?
+Fight?
+- Yes
 	set GameController.state.node = "JesterLarge"
 	set GameController.state.level = 1
 	set GameController.state.event = "strength_minigame"
-- no
-	Jester: fine then
+- No
+	Jester: Scaredy-cat.
 => END
 
 ~ win
-Jester: you have bested me
+Jester: Good work. I wish you the best of luck.
 => END
 
 ~ lose
-Jester: you have not bested me
+Jester: Fair enough... I know when to step back.
 => END
