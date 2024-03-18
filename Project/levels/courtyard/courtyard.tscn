@@ -1,14 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://b4knno112x3b8"]
+[gd_scene load_steps=10 format=3 uid="uid://b4knno112x3b8"]
 
 [ext_resource type="MeshLibrary" uid="uid://bob20ly1g7v0s" path="res://levels/courtyard/assets/gridmap_meshes.tres" id="1_e31pl"]
 [ext_resource type="PackedScene" uid="uid://do6aanqyxkdet" path="res://entities/player/player.tscn" id="2_p6dcn"]
 [ext_resource type="PackedScene" uid="uid://dlr1epvq1p5i5" path="res://entities/npc/jester.tscn" id="3_4gvby"]
-[ext_resource type="Resource" uid="uid://bbaomr8lj1u7e" path="res://entities/npc/jester_large/jester_large.dialogue" id="4_f7qp0"]
-[ext_resource type="Resource" uid="uid://bqj1dvq1qwsav" path="res://entities/npc/jester_crying/jester_crying4.dialogue" id="4_u7a4g"]
-[ext_resource type="Resource" uid="uid://b2ka2y50urbq1" path="res://entities/npc/jester_shuffling/jester_shuffling.dialogue" id="5_julx8"]
-[ext_resource type="Resource" uid="uid://qqg7rh8eiefv" path="res://entities/npc/jester_large/jester_large4.dialogue" id="5_vcv5y"]
-[ext_resource type="Resource" uid="uid://cs8cl2ri7ajya" path="res://entities/npc/jester_shuffling/jester_shuffling4.dialogue" id="8_cqhhj"]
-[ext_resource type="Resource" uid="uid://iws31o5dktd0" path="res://entities/npc/jester_boss/jester_boss.dialogue" id="9_5scvc"]
+[ext_resource type="Resource" uid="uid://csj8rfeq8d0fu" path="res://entities/npc/jester_large/jester_large.dialogue" id="4_imkb0"]
+[ext_resource type="Resource" uid="uid://c5dqxw5dtxna0" path="res://entities/npc/jester_large/jester_large4.dialogue" id="5_1gff5"]
+[ext_resource type="Resource" uid="uid://3eammkldewsj" path="res://entities/npc/jester_shuffling/jester_shuffling4.dialogue" id="6_vitbr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ploor"]
 sky_top_color = Color(0.701961, 0.745098, 1, 1)
@@ -59,7 +56,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.63101, 1.72887, -4.76516)
 animation = &"jester_large"
 
 [node name="Actionable" parent="JesterLarge" index="2"]
-dialogue_resource = ExtResource("4_f7qp0")
+dialogue_resource = ExtResource("4_imkb0")
 
 [node name="JesterShuffling" parent="." instance=ExtResource("3_4gvby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5052, 1.72887, 2.87914)
@@ -67,17 +64,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5052, 1.72887, 2.87914)
 [node name="AnimatedSprite3D" parent="JesterShuffling" index="0"]
 animation = &"jester_shuffling"
 
-[node name="Actionable" parent="JesterShuffling" index="2"]
-dialogue_resource = ExtResource("5_julx8")
-
 [node name="JesterCrying4" parent="." instance=ExtResource("3_4gvby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.402721, 1.72887, -11.0921)
 
 [node name="AnimatedSprite3D" parent="JesterCrying4" index="0"]
 animation = &"jester_crying4"
-
-[node name="Actionable" parent="JesterCrying4" index="2"]
-dialogue_resource = ExtResource("4_u7a4g")
 
 [node name="JesterLarge4" parent="." instance=ExtResource("3_4gvby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4525, 1.72887, -20.3652)
@@ -86,7 +77,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4525, 1.72887, -20.3652)
 animation = &"jester_large4"
 
 [node name="Actionable" parent="JesterLarge4" index="2"]
-dialogue_resource = ExtResource("5_vcv5y")
+dialogue_resource = ExtResource("5_1gff5")
 
 [node name="JesterShuffling4" parent="." instance=ExtResource("3_4gvby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32119, 1.72887, -23.351)
@@ -95,7 +86,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32119, 1.72887, -23.351)
 animation = &"jester_shuffling4"
 
 [node name="Actionable" parent="JesterShuffling4" index="2"]
-dialogue_resource = ExtResource("8_cqhhj")
+dialogue_resource = ExtResource("6_vitbr")
 
 [node name="JesterBoss" parent="." instance=ExtResource("3_4gvby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.434437, 1.72887, -29.373)
@@ -103,9 +94,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.434437, 1.72887, -29.373)
 [node name="AnimatedSprite3D" parent="JesterBoss" index="0"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.125, 0)
 animation = &"jester_boss"
-
-[node name="Actionable" parent="JesterBoss" index="2"]
-dialogue_resource = ExtResource("9_5scvc")
 
 [editable path="JesterLarge"]
 [editable path="JesterShuffling"]

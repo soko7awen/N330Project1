@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbync5yt5t87k"]
+
+[ext_resource type="Script" path="res://menus/minigames/strength/strength.gd" id="1_68gsp"]
+[ext_resource type="Texture2D" uid="uid://hw7p2d3pds1r" path="res://menus/minigames/strength/minigame-arm-jester-1.png" id="1_usbm7"]
+[ext_resource type="Texture2D" uid="uid://cys4a62t1qilc" path="res://menus/minigames/strength/card-strength.png" id="2_ofqjr"]
+[ext_resource type="Texture2D" uid="uid://0uotejmvm1j" path="res://menus/minigames/strength/card-strength-1.png" id="2_t4b10"]
+[ext_resource type="Texture2D" uid="uid://b5q52e1antdvs" path="res://menus/minigames/strength/minigame-arm-player.png" id="3_fd7pl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e0q8j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t4b10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ofqjr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Strength" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_68gsp")
+
+[node name="Hands" type="Node2D" parent="."]
+position = Vector2(260, 0)
+
+[node name="Card" type="AnimatedSprite2D" parent="Hands"]
+position = Vector2(590, 280)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_e0q8j")
+autoplay = "default"
+
+[node name="ArmEnemy" type="Sprite2D" parent="Hands"]
+position = Vector2(68, 275)
+scale = Vector2(2, 2)
+texture = ExtResource("1_usbm7")
+
+[node name="ArmPlayer" type="Sprite2D" parent="Hands"]
+position = Vector2(1078, 274)
+scale = Vector2(2, 2)
+texture = ExtResource("3_fd7pl")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c5dqxw5dtxna0"
+path="res://.godot/imported/jester_large4.dialogue-b98b250b60711f515a010eaf7f71524f.tres"
+
+[deps]
+
+source_file="res://entities/npc/jester_large/jester_large4.dialogue"
+dest_files=["res://.godot/imported/jester_large4.dialogue-b98b250b60711f515a010eaf7f71524f.tres"]
+
+[params]
+
+defaults=true
