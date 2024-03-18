@@ -9,7 +9,7 @@ Answer the riddle?
 	Jester: What kind of lion never roars?
 	- A captured lion!
 		Jester: that is correct!
-		set GameController.state.event = "riddle_won"
+		set GameController.state.event = "riddle_win"
 	- Duh! A dandelion!
 		Jester: that is incorrect!
 		set GameController.state.event = "riddle_lose"

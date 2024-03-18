@@ -5,7 +5,7 @@ Fight?
 - Yes
 	set GameController.state.node = "JesterLarge"
 	set GameController.state.level = 1
-	set GameController.state.event = "strength_minigame"
+	set GameController.state.event = "strength"
 - No
 	Jester: Scaredy-cat.
 => END

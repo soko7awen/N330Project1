@@ -9,7 +9,7 @@ Answer the riddle?
 	Jester: what comes once a minute, twice a moment, but never in a thousand years...?
 	- The letter "m"
 		Jester: w-wah...! that's... that's correct!
-		set GameController.state.event = "riddle_won"
+		set GameController.state.event = "riddle_win"
 	- 1/1000 of a decade
 		Jester: incorrect...
 		set GameController.state.event = "riddle_lose"

@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddayf144e52yp"]
+[gd_scene load_steps=3 format=3 uid="uid://clp3e5k7xi7o4"]
 
-[ext_resource type="Script" path="res://menus/minigames/shuffle/shuffle.gd" id="1_kxjde"]
-[ext_resource type="PackedScene" uid="uid://bdghcm87yvxdr" path="res://menus/minigames/shuffle/card.tscn" id="2_d0rb8"]
+[ext_resource type="Script" path="res://menus/minigames/final/final.gd" id="1_o54v6"]
+[ext_resource type="PackedScene" uid="uid://bdghcm87yvxdr" path="res://menus/minigames/shuffle/card.tscn" id="2_ltthl"]
 
 [node name="Shuffle" type="Control"]
 texture_filter = 1
@@ -11,8 +11,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_kxjde")
-card_scene = ExtResource("2_d0rb8")
+script = ExtResource("1_o54v6")
+card_scene = ExtResource("2_ltthl")
 
 [node name="Cards" type="Node2D" parent="."]
 
@@ -28,12 +28,4 @@ scale = Vector2(2, 2)
 
 [node name="Marker2" type="Node2D" parent="Markers"]
 position = Vector2(800, 246)
-scale = Vector2(2, 2)
-
-[node name="Marker3" type="Node2D" parent="Markers"]
-position = Vector2(121, 400)
-scale = Vector2(2, 2)
-
-[node name="Marker4" type="Node2D" parent="Markers"]
-position = Vector2(1027, 400)
 scale = Vector2(2, 2)

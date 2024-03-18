@@ -3,9 +3,9 @@ Jester: Cards, cards, cards...!
 Jester: Think you can find the right one?
 Play his game?
 - Yes
-	set GameController.state.node = "JesterBoss"
+	set GameController.state.node = "JesterShuffling"
 	set GameController.state.level = 1
-	set GameController.state.event = "boss_minigame"
+	set GameController.state.event = "shuffle"
 - No
 	Jester: Aww.... that's too bad!
 => END

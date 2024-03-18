@@ -13,13 +13,19 @@ config_version=5
 config/name="Jester World"
 run/main_scene="res://levels/courtyard/courtyard.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+run/max_fps=10
+config/icon="res://ui/theme_default/assets/logo.png"
+run/stdout/print_fps=true
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 GameController="*res://globals/game_controller.gd"
 Fullscreen="*res://globals/fullscreen.gd"
+
+[debug]
+
+settings/stdout/print_fps=true
 
 [dialogue_manager]
 
@@ -41,10 +47,10 @@ texture={
 "compress/hdr_compression": 1,
 "compress/high_quality": false,
 "compress/lossy_quality": 0.7,
-"compress/mode": 0,
+"compress/mode": 2,
 "compress/normal_map": 0,
 "detect_3d/compress_to": 0,
-"mipmaps/generate": false,
+"mipmaps/generate": true,
 "mipmaps/limit": -1,
 "process/fix_alpha_border": true,
 "process/hdr_as_srgb": false,

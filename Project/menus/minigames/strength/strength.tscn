@@ -1,10 +1,97 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbync5yt5t87k"]
+[gd_scene load_steps=10 format=3 uid="uid://cbync5yt5t87k"]
 
 [ext_resource type="Script" path="res://menus/minigames/strength/strength.gd" id="1_68gsp"]
 [ext_resource type="Texture2D" uid="uid://hw7p2d3pds1r" path="res://menus/minigames/strength/minigame-arm-jester-1.png" id="1_usbm7"]
 [ext_resource type="Texture2D" uid="uid://cys4a62t1qilc" path="res://menus/minigames/strength/card-strength.png" id="2_ofqjr"]
 [ext_resource type="Texture2D" uid="uid://0uotejmvm1j" path="res://menus/minigames/strength/card-strength-1.png" id="2_t4b10"]
 [ext_resource type="Texture2D" uid="uid://b5q52e1antdvs" path="res://menus/minigames/strength/minigame-arm-player.png" id="3_fd7pl"]
+
+[sub_resource type="Animation" id="Animation_pkmm2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Card:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(590, 280)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ArmEnemy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(68, 275)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ArmPlayer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1078, 274)]
+}
+
+[sub_resource type="Animation" id="Animation_d8whm"]
+resource_name = "shake"
+length = 0.8
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Card:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.05, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(590, 280), Vector2(586, 280), Vector2(590, 280)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ArmEnemy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.05, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(68, 275), Vector2(64, 275), Vector2(68, 275)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ArmPlayer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.05, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(1078, 274), Vector2(1074, 274), Vector2(1078, 274)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pw8l7"]
+_data = {
+"RESET": SubResource("Animation_pkmm2"),
+"shake": SubResource("Animation_d8whm")
+}
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e0q8j"]
 animations = [{
@@ -32,6 +119,11 @@ script = ExtResource("1_68gsp")
 
 [node name="Hands" type="Node2D" parent="."]
 position = Vector2(260, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hands"]
+libraries = {
+"": SubResource("AnimationLibrary_pw8l7")
+}
 
 [node name="Card" type="AnimatedSprite2D" parent="Hands"]
 position = Vector2(590, 280)

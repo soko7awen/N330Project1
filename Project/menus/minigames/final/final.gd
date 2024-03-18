@@ -1,8 +1,8 @@
 extends Control
 @export var card_scene: PackedScene
 var caller = null
-var level = 2
-var card_count = 0
+var level = 1
+var card_count = 3
 var started = false
 var card_starred = 0
 var markers_used = []
@@ -11,17 +11,12 @@ var cards_finished = []
 signal ended(node,caller,winlose,score)
 
 func _ready():
-	if level == 1:
-		card_count = 3
-	if level == 2:
-		card_count = 5
 	card_starred = randi_range(0,card_count-1)
 	for i in card_count:
 		var card_node = card_scene.instantiate()
 		card_node.index = i
 		card_node.position = $Markers.get_child(i).position
-		if i == card_starred:
-			card_node.texture = load("res://menus/minigames/shuffle/card-red-king.png")
+		card_node.texture = load("res://menus/minigames/common/card-red-blank.png")
 		card_node.get_node('AnimationPlayer').seek(randf_range(0,1))
 		$Cards.add_child(card_node)
 		card_node.connect('timeout',_on_timer_timeout)
@@ -71,13 +66,10 @@ func _on_card_pressed(index):
 		i.get_node('Button').mouse_filter = MOUSE_FILTER_IGNORE
 		i.get_node('Button').focus_mode = FOCUS_NONE
 	await get_tree().create_timer(1).timeout
-	for i in $Cards.get_children():
-		i.get_node('Button').hide()
-	await get_tree().create_timer(2).timeout
 	if index == card_starred:
-		ended.emit(self,caller,"win",level)
+		ended.emit(self,caller,"win",0)
 	else:
-		ended.emit(self,caller,"lose",-1*level)
+		ended.emit(self,caller,"lose",0)
 
 func make_selectable():
 	for i in $Cards.get_children():

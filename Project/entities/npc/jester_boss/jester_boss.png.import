@@ -3,26 +3,25 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4hdx7f7k7v87"
-path.s3tc="res://.godot/imported/jester_boss.png-0eb1fae4b3d224e5261ea0598b335d53.s3tc.ctex"
+path="res://.godot/imported/jester_boss.png-0eb1fae4b3d224e5261ea0598b335d53.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://entities/npc/jester_boss/jester_boss.png"
-dest_files=["res://.godot/imported/jester_boss.png-0eb1fae4b3d224e5261ea0598b335d53.s3tc.ctex"]
+dest_files=["res://.godot/imported/jester_boss.png-0eb1fae4b3d224e5261ea0598b335d53.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

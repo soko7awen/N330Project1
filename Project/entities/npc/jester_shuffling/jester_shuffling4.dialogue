@@ -4,7 +4,7 @@ Play his game?
 - Yes
 	set GameController.state.node = "JesterShuffling4"
 	set GameController.state.level = 2
-	set GameController.state.event = "shuffling_minigame"
+	set GameController.state.event = "shuffle"
 - No
 	Jester: Weak stomach?
 => END

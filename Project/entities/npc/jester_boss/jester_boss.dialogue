@@ -4,9 +4,9 @@ Jester: I see that you intend to fight for my place as High Jester to the King.
 Jester: Are you ready to face me?
 Face the Head Jester?
 - Yes!
-	set GameController.state.node = "JesterShuffling"
-	set GameController.state.level = "1"
-	set GameController.state.event = "shuffling_minigame"
+	set GameController.state.node = "JesterBoss"
+	set GameController.state.level = 1
+	set GameController.state.event = "final"
 - No!
 	Jester: Naturally! I, too, would be scared...
 => END

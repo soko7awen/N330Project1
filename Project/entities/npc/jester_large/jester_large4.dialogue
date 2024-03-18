@@ -5,7 +5,7 @@ Fight?
 - Yes
 	set GameController.state.node = "JesterLarge4"
 	set GameController.state.level = 2
-	set GameController.state.event = "strength_minigame"
+	set GameController.state.event = "strength"
 - No
 	Jester: Aww... not even going to try?
 => END
