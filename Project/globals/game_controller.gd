@@ -25,6 +25,13 @@ func _process(_delta):
 			actionable.dialogue_start = "lose"
 			actionable.action()
 			state_clear()
+		elif state.event == 'boss_win_done':
+			get_node('../main/'+state.node).queue_free()
+			set_player_movement(true)
+			state_clear()
+		elif state.event == 'boss_lose_done':
+			get_tree().quit()
+			state_clear()
 		else:
 			if player_movement == true:
 				set_player_movement(false)
@@ -56,3 +63,7 @@ func state_clear():
 	state.node = null
 	state.event = null
 	state.level = 1
+
+func end_game():
+	$"../main/CanvasLayer/"
+	$"../main/CanvasLayer".add_child(load("res://menus/end/end_cutscene.tscn").instantiate())

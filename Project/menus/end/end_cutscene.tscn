@@ -1,0 +1,168 @@
+[gd_scene load_steps=15 format=3 uid="uid://cg55fa2kvrue5"]
+
+[ext_resource type="Script" path="res://menus/end/end_cutscene.gd" id="1_4mlhn"]
+[ext_resource type="Texture2D" uid="uid://7x1cpk20de45" path="res://menus/end/assets/cutscene-king1.png" id="1_hpl80"]
+[ext_resource type="Texture2D" uid="uid://dat6yogwfrecs" path="res://menus/end/assets/cutscene-king2.png" id="2_wjt8n"]
+[ext_resource type="Texture2D" uid="uid://c2dp80rocni25" path="res://menus/end/assets/cutscene-king3.png" id="3_u5qpr"]
+[ext_resource type="Texture2D" uid="uid://dk4ji52g6a2nh" path="res://menus/end/assets/cutscene-king4.png" id="4_50rsl"]
+[ext_resource type="Texture2D" uid="uid://dn4p0er1owowb" path="res://menus/end/assets/cutscene-king5.png" id="5_dqkg6"]
+[ext_resource type="Texture2D" uid="uid://d1mbfl4fd1k8t" path="res://menus/end/assets/cutscene-king6.png" id="6_kc6vm"]
+[ext_resource type="Texture2D" uid="uid://c75ajwal2hb7c" path="res://menus/end/assets/cutscene-king.png" id="7_ear47"]
+[ext_resource type="Texture2D" uid="uid://qwicdeip47y2" path="res://ui/theme_default/assets/blank-button2.png" id="9_8gknq"]
+[ext_resource type="Texture2D" uid="uid://cu33tstws3f4y" path="res://ui/theme_default/assets/blank-button.png" id="9_eaeby"]
+[ext_resource type="Texture2D" uid="uid://cmlfmms2j4knb" path="res://ui/theme_default/assets/blank-click.png" id="10_rhedf"]
+[ext_resource type="Texture2D" uid="uid://bveke8owwc1v4" path="res://ui/theme_default/assets/blank-hover.png" id="11_r2gmn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dwdyy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hpl80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wjt8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u5qpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_50rsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dqkg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kc6vm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ear47")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_nu3lf"]
+viewport_path = NodePath("TextureRect/SubViewport")
+
+[node name="end_cutscene" type="Control" node_paths=PackedStringArray("description_node", "label_node")]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4mlhn")
+description_node = NodePath("TextureRect/SubViewport/Description")
+label_node = NodePath("TextureRect/SubViewport/Label")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(603, 323)
+scale = Vector2(2.8, 2.8)
+sprite_frames = SubResource("SpriteFrames_dwdyy")
+autoplay = "default"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_nu3lf")
+expand_mode = 3
+
+[node name="SubViewport" type="SubViewport" parent="TextureRect"]
+transparent_bg = true
+size = Vector2i(384, 216)
+
+[node name="Description" type="Label" parent="TextureRect/SubViewport"]
+texture_filter = 1
+offset_right = 355.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 9
+text = "TO THE DUNGEONS WITH YOU..."
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="TextureRect/SubViewport"]
+texture_filter = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -32.0
+offset_right = 45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 23
+text = "Bad End"
+vertical_alignment = 1
+
+[node name="TryAgain" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -256.0
+offset_top = 29.0
+offset_right = -96.0
+offset_bottom = 57.0
+grow_horizontal = 0
+scale = Vector2(2, 2)
+pivot_offset = Vector2(80, 15)
+texture_normal = ExtResource("9_eaeby")
+texture_pressed = ExtResource("10_rhedf")
+texture_hover = ExtResource("11_r2gmn")
+
+[node name="Label" type="Label" parent="TryAgain"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -0.5
+offset_right = 1.0
+offset_bottom = 4.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 19
+text = "Try Again?"
+horizontal_alignment = 1
+
+[node name="Exit" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -151.0
+offset_top = 104.0
+offset_right = -44.0
+offset_bottom = 132.0
+grow_horizontal = 0
+scale = Vector2(2, 2)
+pivot_offset = Vector2(80, 15)
+texture_normal = ExtResource("9_8gknq")
+
+[node name="Label" type="Label" parent="Exit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_right = -0.5
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 19
+text = "Exit"
+horizontal_alignment = 1

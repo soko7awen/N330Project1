@@ -9,3 +9,5 @@ func _input(event):
 			get_viewport().mode = Window.MODE_MAXIMIZED
 		else:
 			get_viewport().mode = Window.MODE_FULLSCREEN
+	if event.is_action_pressed("quit"):
+		get_tree().quit()

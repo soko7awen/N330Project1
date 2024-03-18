@@ -13,7 +13,7 @@ config_version=5
 config/name="Jester World"
 run/main_scene="res://levels/courtyard/courtyard.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-run/max_fps=10
+run/max_fps=13
 config/icon="res://ui/theme_default/assets/logo.png"
 run/stdout/print_fps=true
 
@@ -47,10 +47,10 @@ texture={
 "compress/hdr_compression": 1,
 "compress/high_quality": false,
 "compress/lossy_quality": 0.7,
-"compress/mode": 2,
+"compress/mode": 0,
 "compress/normal_map": 0,
 "detect_3d/compress_to": 0,
-"mipmaps/generate": true,
+"mipmaps/generate": false,
 "mipmaps/limit": -1,
 "process/fix_alpha_border": true,
 "process/hdr_as_srgb": false,
@@ -110,6 +110,11 @@ fullscreen={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":true,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
+quit={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
 
 [internationalization]
 
@@ -118,3 +123,7 @@ locale/translations_pot_files=PackedStringArray("res://entities/npc/test/test.di
 [layer_names]
 
 3d_physics/layer_5="Actionables"
+
+[rendering]
+
+renderer/rendering_method="mobile"
