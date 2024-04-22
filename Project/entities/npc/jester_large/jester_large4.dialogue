@@ -1,0 +1,19 @@
+~ start
+Jester: I'm simply the strongest jester alive!
+Jester: No one in the world has ever beat me!
+Fight?
+- Yes
+	set GameController.state.node = "JesterLarge4"
+	set GameController.state.level = 2
+	set GameController.state.event = "strength"
+- No
+	Jester: Aww... not even going to try?
+=> END
+
+~ win
+Jester: Wh... What?!
+=> END
+
+~ lose
+Jester: See! What did I tell you!
+=> END

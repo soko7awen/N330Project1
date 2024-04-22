@@ -1,0 +1,19 @@
+~ start
+Jester: Cards, cards, cards...!
+Jester: Think you can find the right one?
+Play his game?
+- Yes
+	set GameController.state.node = "JesterShuffling"
+	set GameController.state.level = 1
+	set GameController.state.event = "shuffle"
+- No
+	Jester: Aww.... that's too bad!
+=> END
+
+~ win
+Jester: How did you- I thought I was fast enough!
+=> END
+
+~ lose
+Jester: Aha... couldn't keep up!
+=> END

@@ -1,0 +1,26 @@
+~ start
+Jester: ...my riddles.....
+Jester: you'll never beat.... (sob).... my riddles...!
+Answer the riddle?
+- Answer
+	set GameController.state.node = "JesterCrying"
+	set GameController.state.level = 1
+	Jester: Tell me....
+	Jester: What kind of lion never roars?
+	- A captured lion!
+		Jester: that is correct!
+		set GameController.state.event = "riddle_win"
+	- Duh! A dandelion!
+		Jester: that is incorrect!
+		set GameController.state.event = "riddle_lose"
+- Don't answer
+	Jester: fine then
+=> END
+
+~ win
+Jester: (sob) N-no! How did you-!
+=> END
+
+~ lose
+Jester: I knew it.... it's too difficult......
+=> END

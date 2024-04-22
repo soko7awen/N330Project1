@@ -1,0 +1,19 @@
+~ start
+Jester: Hey.
+Jester: Wanna tussle?
+Fight?
+- Yes
+	set GameController.state.node = "JesterLarge"
+	set GameController.state.level = 1
+	set GameController.state.event = "strength"
+- No
+	Jester: Scaredy-cat.
+=> END
+
+~ win
+Jester: Good work. I wish you the best of luck.
+=> END
+
+~ lose
+Jester: Fair enough... I know when to step back.
+=> END

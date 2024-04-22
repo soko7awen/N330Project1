@@ -1,0 +1,30 @@
+~ start
+Jester: oh... i'm so upset!
+Jester: not a single person has been able to answer my riddle...!
+Answer the riddle?
+- Answer
+	set GameController.state.node = "JesterCrying4"
+	set GameController.state.level = 2
+	Jester: ah...!
+	Jester: what comes once a minute, twice a moment, but never in a thousand years...?
+	- The letter "m"
+		Jester: w-wah...! that's... that's correct!
+		set GameController.state.event = "riddle_win"
+	- 1/1000 of a decade
+		Jester: incorrect...
+		set GameController.state.event = "riddle_lose"
+	- Happiness
+		Jester: incorrect... and i thought i was gloomy....
+		set GameController.state.event = "riddle_lose"
+- Don't answer
+	Jester: gh- i.... i see!
+=> END
+
+~ win
+Jester: you did it, but....
+Jester: oh I'm still so upset!!
+=> END
+
+~ lose
+Jester: n-no! i thought you might be the one to finally get it...
+=> END

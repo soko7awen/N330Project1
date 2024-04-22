@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://blqp35g3pjg2e"
+path="res://.godot/imported/jester_boss.dialogue-618d8226835d009623d9bb0640119bbb.tres"
+
+[deps]
+
+source_file="res://entities/npc/jester_boss/jester_boss.dialogue"
+dest_files=["res://.godot/imported/jester_boss.dialogue-618d8226835d009623d9bb0640119bbb.tres"]
+
+[params]
+
+defaults=true

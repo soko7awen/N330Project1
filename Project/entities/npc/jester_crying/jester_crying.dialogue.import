@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://l4i66i1yg2w"
+path="res://.godot/imported/jester_crying.dialogue-4d1cc2f7a9d36e4c06a479b86e4bdca8.tres"
+
+[deps]
+
+source_file="res://entities/npc/jester_crying/jester_crying.dialogue"
+dest_files=["res://.godot/imported/jester_crying.dialogue-4d1cc2f7a9d36e4c06a479b86e4bdca8.tres"]
+
+[params]
+
+defaults=true
